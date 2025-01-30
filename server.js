@@ -30,7 +30,7 @@ app.post('/webhook', async (req, res) => {
 
         // Enviar evento para o Facebook Conversions API
         const fbResponse = await axios.post(
-            `https://graph.facebook.com/v18.0/${process.env.1263039378072892}/events?access_token=${process.env.EABxKsuEs2ZBABO1K0ZAkgJsDx7nP6Ci7EMSbRSThemV8EXoPUFGYxJAZABjVdhmbyZAHiknw45cK3zFiAB8fJGx0YWZA9TFRQwLuYySwbP5q0wFtmZACZBKUMj1Umi3qE3vRJGfUfjopUmYm712a4U5ZArDZBARvX9mRvK7SeZCK6EFlklPJZAzZBuDeZBDtzv8Y84h4HnQZDZD}`,
+            `https://graph.facebook.com/v18.0/${process.env.FB_PIXEL_ID}/events?access_token=${process.env.FB_ACCESS_TOKEN}`,
             { data: [fbEvent] }
         );
 
